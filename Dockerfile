@@ -9,7 +9,7 @@ COPY ansible-requirements.yml /ansible-requirements.yml
 RUN ansible-galaxy install -r /ansible-requirements.yml && \
     rm -f /ansible-requirements.yml
 
-COPY ./entrypoint.sh /entrypoint.sh
+COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
 
 ENTRYPOINT ["/entrypoint.sh"]
